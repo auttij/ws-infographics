@@ -27,9 +27,12 @@ for (const entry of htmlFiles) {
   const fileUrl = pathToFileURL(path.join('./infographics', entry.name)).href;
   
   await page.goto(fileUrl);
+  await page.setViewport({ width: 800, height: 1000, deviceScaleFactor: 2 });
+
 
   const outputPath = path.join(outDir, `${path.basename(entry.name, '.html')}.png`);
-  await page.screenshot({ path: outputPath, fullPage: true });
+  const element = await page.$('.ws-infographic');
+  await element.screenshot({ path: outputPath });
   
   await page.close();
   console.log(`Saved ${outputPath}`);
