@@ -428,7 +428,7 @@ body {
   Named areas for common layouts. Use grid-column / grid-row directly
   on boxes for anything more custom.
 */
-.area--gear-set     { grid-column: 1 / 3; grid-row: 1 / 4 }
+.area--gear-set     { grid-column: 1 / 2; grid-row: 1 / 4 }
 .area--top          { grid-column: 1 / 4; grid-row: 1 / 3; }
 .area--highlight    { grid-column: 1 / 4; grid-row: 4 / 6; }
 .area--side-top     { grid-column: 4 / 6; grid-row: 1 / 3; }
@@ -455,9 +455,5 @@ body {
 
 .area--xl-a  { grid-column: 1 / 5; }
 .area--xl-b  { grid-column: 2 / 6; }
-.area--xl-c  { grid-column: 3 / 7; }
 
-.area--xxl-a { grid-column: 1 / 6; }
-.area--xxl-b { grid-column: 2 / 7; }
-
-.area--full  { grid-column: 1 / 7; }
+.area--full { grid-column: 1 / 6; }
