@@ -15,7 +15,7 @@ const browser = await puppeteer.launch({
   args: ['--allow-file-access-from-files'],
 });
 
-const entries = await fs.readdir('.', { withFileTypes: true });
+const entries = await fs.readdir('./infographics', { withFileTypes: true });
 const htmlFiles = entries
   .filter((entry) => entry.isFile() && entry.name.toLowerCase().endsWith('.html'))
   .sort();
@@ -24,7 +24,7 @@ await fs.mkdir(outDir, { recursive: true });
 
 for (const entry of htmlFiles) {
   const page = await browser.newPage();
-  const fileUrl = pathToFileURL(entry.name).href;
+  const fileUrl = pathToFileURL(path.join('./infographics', entry.name)).href;
   
   await page.goto(fileUrl);
 
