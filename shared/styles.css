@@ -308,6 +308,62 @@ body {
 .warning    { color: var(--tx-warning); }
 .negative   { color: var(--tx-negative); }
 
+/* ─── Item Outline colors ─────────────────────────────────────── */
+.outline {
+  filter:
+    drop-shadow(1px 0 0 var(--outline-color))
+    drop-shadow(-1px 0 0 var(--outline-color))
+    drop-shadow(0 1px 0 var(--outline-color))
+    drop-shadow(0 -1px 0 var(--outline-color));
+}
+
+.outline-fine       { --outline-color: var(--tx-fine); }
+.outline-uncommon   { --outline-color: var(--tx-uncommon); }
+.outline-rare       { --outline-color: var(--tx-rare); }
+.outline-epic       { --outline-color: var(--tx-epic); }
+.outline-legendary  { --outline-color: var(--tx-legendary); }
+.outline-ethereal   { --outline-color: var(--tx-ethereal); }
+
+
+/* ─── Gear Slots & Sets ──────────────────────────────────────── */
+.gear-set {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.75rem;
+}
+
+.gear-row {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 2rem;
+}
+
+.gear-slot {
+  display: flex;
+  flex-direction: column;
+  align-content: center;
+
+  width: 48px;
+  height: 48px;
+  border: 1px solid var(--box-primary-outline);
+  background: var(--box-dark-bg);
+  border-radius: 0.5rem;
+  
+  overflow: hidden;
+}
+
+.gear-icon {  
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  flex: 0 0 auto;
+
+  padding: 0.5rem;
+}
+
+
 /* ─── Watermark ──────────────────────────────────────────────── */
 .watermark {
   position: absolute;
@@ -372,6 +428,7 @@ body {
   Named areas for common layouts. Use grid-column / grid-row directly
   on boxes for anything more custom.
 */
+.area--gear-set     { grid-column: 1 / 3; grid-row: 1 / 4 }
 .area--top          { grid-column: 1 / 4; grid-row: 1 / 3; }
 .area--highlight    { grid-column: 1 / 4; grid-row: 4 / 6; }
 .area--side-top     { grid-column: 4 / 6; grid-row: 1 / 3; }
