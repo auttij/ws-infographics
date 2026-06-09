@@ -3,7 +3,7 @@
   "private": true,
   "type": "module",
   "scripts": {
-    "capture": "node capture-infographics.mjs"
+    "capture": "node scripts/capture-infographics.mjs"
   },
   "devDependencies": {
     "puppeteer": "^24.10.2"
