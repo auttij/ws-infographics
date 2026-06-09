@@ -3,14 +3,30 @@
 A collection of Walkscape related infographics, with some tools and templates for making them.
 
 ## Screenshots
-Taking screenshots with a script is preferred for consistency. It requires npm installed.
+Taking screenshots with a script is preferred for consistency.
 
-When first setting up, install the dependencies:
+Prerequisite: Node.js must be installed: https://nodejs.org/en/download
+
+### Easiest way for contributors
+Windows:
+```
+double-click scripts/capture-infographics.bat
+```
+
+macOS/Linux:
+```
+./scripts/capture-infographics.sh
+```
+
+Both helper scripts will install dependencies automatically on first run.
+
+### Manual commands
+Install dependencies:
 ```
 npm install
 ```
 
-To take screenshots of all .html files in the root directory:
+Capture all `.html` files in `infographics/`:
 ```
 npm run capture
 ```
