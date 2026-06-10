@@ -418,11 +418,6 @@ body {
   vertical-align: middle;
 }
 
-/* ─── Screenshot embeds ──────────────────────────────────────── */
-.SS1 { width: 220px; border-radius: 0.5rem; margin-top: 0.5rem; }
-.SS2 { width: 210px; border-radius: 0.5rem; margin-top: 0.5rem; }
-.SS3 { width: 340px; border-radius: 0.5rem; margin-top: 0.5rem; }
-
 /* ─── Grid area helpers ──────────────────────────────────────── */
 /*
   Named areas for common layouts. Use grid-column / grid-row directly
