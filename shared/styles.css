@@ -197,8 +197,8 @@ body {
   content: '';
   position: absolute;
   right: -13px;
-  top: 50%;
-  transform: translateY(-50%);
+  top: var(--tail-top, 50%);
+  transform: translateY(var(--tail-translate-y, -50%));
   width: 0; height: 0;
   border-top:    10px solid transparent;
   border-bottom: 10px solid transparent;
@@ -209,8 +209,8 @@ body {
   content: '';
   position: absolute;
   left: -13px;
-  top: 50%;
-  transform: translateY(-50%);
+  top: var(--tail-top, 50%);
+  transform: translateY(var(--tail-translate-y, -50%));
   width: 0; height: 0;
   border-top:    10px solid transparent;
   border-bottom: 10px solid transparent;
@@ -221,8 +221,8 @@ body {
   content: '';
   position: absolute;
   bottom: -13px;
-  left: 50%;
-  transform: translateX(-50%);
+  left: var(--tail-left, 50%);
+  transform: translateX(var(--tail-translate-x, -50%));
   width: 0; height: 0;
   border-left:  10px solid transparent;
   border-right: 10px solid transparent;
@@ -233,20 +233,14 @@ body {
   content: '';
   position: absolute;
   top: -13px;
-  left: 50%;
-  transform: translateX(-50%);
+  left: var(--tail-left, 50%);
+  transform: translateX(var(--tail-translate-x, -50%));
   width: 0; height: 0;
   border-left:   10px solid transparent;
   border-right:  10px solid transparent;
   border-bottom: 12px solid var(--box-primary-outline);
   z-index: 1;
 }
-/* Offset variants — tail at 25% / 75% instead of center */
-.tail-down-left::after    { left: 25%; transform: none; }
-.tail-down-right::after   { left: 75%; transform: none; }
-.tail-right-top::after    { top: 25%; transform: none; }
-.tail-right-bottom::after { top: 75%; transform: none; }
-
 /* Colored-box tail overrides */
 .ws-box--positive.tail-right::after,
 .ws-box--positive.tail-left::after,
