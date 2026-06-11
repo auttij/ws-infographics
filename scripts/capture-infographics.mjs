@@ -17,7 +17,7 @@ const browser = await puppeteer.launch({
 
 const entries = await fs.readdir('./infographics', { withFileTypes: true });
 const htmlFiles = entries
-  .filter((entry) => entry.isFile() && entry.name.toLowerCase().endsWith('.html'))
+  .filter((entry) => entry.isFile() && entry.name.toLowerCase().endsWith('.html') && !entry.name.startsWith('_'))
   .sort();
 
 await fs.mkdir(outDir, { recursive: true });
