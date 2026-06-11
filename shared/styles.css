@@ -293,6 +293,7 @@ body {
 
 /* ─── Utility text colors ────────────────────────────────────── */
 .fine       { color: var(--tx-fine); }
+.common     { color: var(--tx-primary); }
 .uncommon   { color: var(--tx-uncommon); }
 .rare       { color: var(--tx-rare); }
 .epic       { color: var(--tx-epic); }
@@ -312,6 +313,7 @@ body {
 }
 
 .outline-fine       { --outline-color: var(--tx-fine); }
+.outline-common     { --outline-color: var(--tx-primary); }
 .outline-uncommon   { --outline-color: var(--tx-uncommon); }
 .outline-rare       { --outline-color: var(--tx-rare); }
 .outline-epic       { --outline-color: var(--tx-epic); }
